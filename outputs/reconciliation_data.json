@@ -1,0 +1,108 @@
+{
+  "summary": {
+    "total_invoices": 4,
+    "total_transactions": 5,
+    "total_invoice_amount": 54450.0,
+    "total_bank_received": 44150.0,
+    "audit_timestamp": "2026-05-28T14:15:00.849379"
+  },
+  "matched_items": [
+    {
+      "invoice_id": "INV-2026-001",
+      "order_id": "ORD-20260501-A001",
+      "customer": "Tech Startup Co.",
+      "invoice_amount": 12100.0,
+      "transaction_id": "TX-2026-0501-001",
+      "bank_amount": 12100.0,
+      "transaction_date": "2026-05-08",
+      "status": "matched"
+    },
+    {
+      "invoice_id": "INV-2026-002",
+      "order_id": "ORD-20260505-B002",
+      "customer": "E-Commerce Ltd.",
+      "invoice_amount": 22000.0,
+      "transaction_id": "TX-2026-0505-002",
+      "bank_amount": 10000.0,
+      "transaction_date": "2026-05-12",
+      "status": "matched"
+    },
+    {
+      "invoice_id": "INV-2026-003",
+      "order_id": "ORD-20260510-C003",
+      "customer": "Global Supply Inc.",
+      "invoice_amount": 17050.0,
+      "transaction_id": "TX-2026-0510-003",
+      "bank_amount": 17050.0,
+      "transaction_date": "2026-05-15",
+      "status": "matched"
+    }
+  ],
+  "unmatched_invoices": [
+    {
+      "invoice_id": "INV-2026-004",
+      "order_id": "ORD-20260515-D004",
+      "customer": "Digital Solutions LLC",
+      "amount": 3300.0,
+      "status": "overdue",
+      "due_date": "2026-06-15",
+      "notes": "Payment due 2026-06-15 - OVERDUE AS OF 2026-05-28"
+    }
+  ],
+  "unmatched_transactions": [
+    {
+      "transaction_id": "TX-2026-0518-004",
+      "date": "2026-05-18",
+      "reference": "ORD-20260510-C003-REFUND",
+      "amount": -500.0,
+      "description": "Refund for Global Supply Inc.",
+      "note": ""
+    },
+    {
+      "transaction_id": "TX-2026-0525-005",
+      "date": "2026-05-25",
+      "reference": "UNKNOWN",
+      "amount": 5000.0,
+      "description": "Incoming transfer - source unclear",
+      "note": "Unmatched transaction - needs investigation"
+    }
+  ],
+  "audit_findings": [
+    {
+      "severity": "CRITICAL",
+      "category": "UNDERPAYMENT",
+      "invoice_id": "INV-2026-002",
+      "order_id": "ORD-20260505-B002",
+      "description": "Invoice amount (22000.0) does not match bank payment (10000.0)",
+      "amount_discrepancy": -12000.0,
+      "recommendation": "Contact customer to confirm payment amount"
+    },
+    {
+      "severity": "WARNING",
+      "category": "UNMATCHED_TRANSACTION",
+      "invoice_id": "N/A",
+      "order_id": "ORD-20260510-C003-REFUND",
+      "description": "Bank transaction TX-2026-0518-004 has no matching invoice ($500.0)",
+      "amount_discrepancy": 0.0,
+      "recommendation": "Verify transaction source and update invoice reference or create new invoice"
+    },
+    {
+      "severity": "WARNING",
+      "category": "UNMATCHED_TRANSACTION",
+      "invoice_id": "N/A",
+      "order_id": "UNKNOWN",
+      "description": "Bank transaction TX-2026-0525-005 has no matching invoice ($5000.0)",
+      "amount_discrepancy": 0.0,
+      "recommendation": "Verify transaction source and update invoice reference or create new invoice"
+    },
+    {
+      "severity": "WARNING",
+      "category": "OVERDUE_PAYMENT",
+      "invoice_id": "INV-2026-004",
+      "order_id": "ORD-20260515-D004",
+      "description": "Invoice is overdue (due: 2026-06-15)",
+      "amount_discrepancy": 0.0,
+      "recommendation": "Send payment reminder to customer"
+    }
+  ]
+}

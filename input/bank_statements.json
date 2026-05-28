@@ -1,0 +1,49 @@
+[
+  {
+    "transaction_id": "TX-2026-0501-001",
+    "transaction_date": "2026-05-08",
+    "reference": "ORD-20260501-A001",
+    "description": "Transfer from Tech Startup Co. - INV-2026-001",
+    "amount": 12100.00,
+    "balance_after": 112100.00,
+    "status": "completed"
+  },
+  {
+    "transaction_id": "TX-2026-0505-002",
+    "transaction_date": "2026-05-12",
+    "reference": "ORD-20260505-B002",
+    "description": "Partial payment from E-Commerce Ltd.",
+    "amount": 10000.00,
+    "balance_after": 122100.00,
+    "status": "completed",
+    "note": "Only 10K received instead of 22K"
+  },
+  {
+    "transaction_id": "TX-2026-0510-003",
+    "transaction_date": "2026-05-15",
+    "reference": "ORD-20260510-C003",
+    "description": "Payment from Global Supply Inc. - INV-2026-003",
+    "amount": 17050.00,
+    "balance_after": 139150.00,
+    "status": "completed"
+  },
+  {
+    "transaction_id": "TX-2026-0518-004",
+    "transaction_date": "2026-05-18",
+    "reference": "ORD-20260510-C003-REFUND",
+    "description": "Refund for Global Supply Inc.",
+    "amount": -500.00,
+    "balance_after": 138650.00,
+    "status": "completed"
+  },
+  {
+    "transaction_id": "TX-2026-0525-005",
+    "transaction_date": "2026-05-25",
+    "reference": "UNKNOWN",
+    "description": "Incoming transfer - source unclear",
+    "amount": 5000.00,
+    "balance_after": 143650.00,
+    "status": "completed",
+    "note": "Unmatched transaction - needs investigation"
+  }
+]

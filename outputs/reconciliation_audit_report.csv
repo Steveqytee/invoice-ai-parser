@@ -1,0 +1,25 @@
+RECONCILIATION AUDIT REPORT,,,,
+Generated:,2026-05-28T14:15:00.849974,,,
+,,,,
+SUMMARY,,,,
+Total Invoices:,4,,,
+Total Invoice Amount:,"$54,450.00",,,
+Total Bank Received:,"$44,150.00",,,
+,,,,
+MATCHED INVOICES,Invoice ID,Order ID,Invoice Amount,Bank Amount,Status
+,INV-2026-001,ORD-20260501-A001,"$12,100.00","$12,100.00",matched
+,INV-2026-002,ORD-20260505-B002,"$22,000.00","$10,000.00",matched
+,INV-2026-003,ORD-20260510-C003,"$17,050.00","$17,050.00",matched
+,,,,
+AUDIT FINDINGS,Severity,Category,Invoice ID,Description,Recommendation
+,CRITICAL,UNDERPAYMENT,INV-2026-002,Invoice amount (22000.0) does not match bank payment (10000.0),Contact customer to confirm payment amount
+,WARNING,UNMATCHED_TRANSACTION,N/A,Bank transaction TX-2026-0518-004 has no matching invoice ($500.0),Verify transaction source and update invoice reference or create new invoice
+,WARNING,UNMATCHED_TRANSACTION,N/A,Bank transaction TX-2026-0525-005 has no matching invoice ($5000.0),Verify transaction source and update invoice reference or create new invoice
+,WARNING,OVERDUE_PAYMENT,INV-2026-004,Invoice is overdue (due: 2026-06-15),Send payment reminder to customer
+,,,,
+UNMATCHED INVOICES,Invoice ID,Customer,Amount,Status,Notes
+,INV-2026-004,Digital Solutions LLC,"$3,300.00",overdue,Payment due 2026-06-15 - OVERDUE AS OF 2026-05-28
+,,,,
+UNMATCHED TRANSACTIONS,Transaction ID,Date,Amount,Description,Note
+,TX-2026-0518-004,2026-05-18,$-500.00,Refund for Global Supply Inc.,
+,TX-2026-0525-005,2026-05-25,"$5,000.00",Incoming transfer - source unclear,Unmatched transaction - needs investigation
