@@ -5,7 +5,7 @@ An intelligent invoice parser and financial reconciliation system designed for e
 ## 🎯 Features
 
 - **Intelligent Reconciliation**: Matches invoices to bank transactions with smart anomaly detection
-- **Automated Audit**: Identifies critical issues like underpayments, overdue invoices, and unmatched transactions
+- **Automated Audit**: Identifies critical issues like underpayments, missing payments, and overdue invoices
 - **Color-Coded Alerts**: Visual alerts in terminal (🚨 CRITICAL, ⚠️ WARNING, ℹ️ INFO)
 - **Comprehensive Reports**: Generates audit-ready CSV and JSON reports
 - **Enterprise-Ready**: Built for financial teams, accountants, and CFOs
@@ -80,7 +80,7 @@ python3 scripts/invoice_ai_parser.py
 
 ## 🤖 Smart Auditing Logic
 
-The parser uses rule-based AI logic to:
+The parser uses rule-based logic to:
 
 1. **Match invoices to transactions** by order reference
 2. **Detect amount mismatches** - flags if paid amount differs from invoice
@@ -141,47 +141,17 @@ Edit `scripts/invoice_ai_parser.py` to:
 
 ---
 
+## 📚 Inspiration & References
+
+This project was inspired by **ParserData's financial document processing framework**:
+- **Ref**: https://github.com/parserdata/parserdata-ai-agents-integration
+- **Concept**: Automated extraction and reconciliation of financial data
+- **Approach**: Building scalable solutions for financial data quality and automation
+
+While this is an independent implementation, the core inspiration came from ParserData's approach to handling financial documents and extraction workflows.
+
+---
+
 **Version**: 1.0  
 **Use Case**: Enterprise Financial Automation  
 **Tested Scenarios**: E-commerce invoicing, partial payments, overdue tracking, unmatched transactions
-
-
----
-
-## 🙏 Acknowledgments & Attribution
-
-This project is built on top of and extends the work from:
-
-**[parserdata/parserdata-ai-agents-integration](https://github.com/parserdata/parserdata-ai-agents-integration)**
-- Original Project: ParserData AI Agents Integration framework
-- Author: [ParserData Team](https://github.com/parserdata)
-- Foundation: Document parsing and AI agent orchestration skills
-
-### What I Added
-
-Based on the original framework, I created:
-- ✅ **Complete Invoice AI Parser** (`scripts/invoice_ai_parser.py`) - Smart reconciliation engine with anomaly detection
-- ✅ **Intelligent Reconciliation Logic** - 4-tier validation system (order matching, amount checking, unmatched detection, status validation)
-- ✅ **Enterprise Reporting** - Multi-format output (Terminal alerts, CSV audit reports, JSON API data)
-- ✅ **Real-World Test Data** - Realistic e-commerce invoices and bank statements with known anomalies
-- ✅ **Production-Ready Architecture** - Clean OOP design, modular code, extensible framework
-
-### Original Components Used
-
-- Project structure and skills framework from original repo
-- Initial setup and documentation patterns
-
-### Derivative Works
-
-This project significantly extends the original framework with:
-- 400+ lines of new reconciliation logic
-- Custom anomaly detection algorithms
-- New reporting pipelines
-- Domain-specific implementation for financial reconciliation
-
----
-
-**License**: MIT (See LICENSE file)  
-**Original Project**: MIT License  
-**Attribution**: Full credit to ParserData team for foundation
-
